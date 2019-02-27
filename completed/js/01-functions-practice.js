@@ -28,6 +28,11 @@ function findModulus(x, y) {
     return y;
 }
 //STEP 5
-function five() {
-    prompt("");
+function stepFive() {
+    var addedUp = 0;
+    console.log(arguments.length);
+    for (var i = 0; i < arguments.length; i++) {
+        addedUp += Number(arguments[i]);
+    }
+    return addedUp;
 }
