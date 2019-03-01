@@ -1,3 +1,5 @@
+/*eslint-env browser*/
+
 //STEP 1
 function halfNumber(x) {
     "use strict";
@@ -28,11 +30,20 @@ function findModulus(x, y) {
     return y;
 }
 //STEP 5
+var addedUp;
+var x = 0;
 function stepFive() {
-    var addedUp = 0;
-    console.log(arguments.length);
-    for (var i = 0; i < arguments.length; i++) {
-        addedUp += Number(arguments[i]);
+    "use strict";
+    addedUp = window.prompt("Put numbers in, delimited by commas and spaces \nExample: 1, 5, 8");
+    addedUp = addedUp.split(', ');
+    for (var i = 0; i < addedUp.length; i++) {
+        addedUp[i] = Number(addedUp[i]);
     }
-    return addedUp;
+    console.log(addedUp);
+    window.console.log(addedUp.length, addedUp, addedUp[1], addedUp[2]);
+    for (var j = 0; j < addedUp.length; j++) {
+        x += Number(addedUp[j]);
+    }
+    window.alert("The sum of the numbers you entered is " + x);
+    return x;
 }
